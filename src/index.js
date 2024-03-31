@@ -1,9 +1,10 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
+import './index.css'
 
 const BookList = () => {
     return (
-        <section>
+        <section className="booklist">
             <Book />
             <Book />
             <Book />
@@ -14,7 +15,7 @@ const BookList = () => {
 
 const Book = () => {
     return (
-        <article>
+        <article className="book">
             <Image />
             <Title />
             <Author />
@@ -23,7 +24,10 @@ const Book = () => {
 }
     
 const Image = () => (
-  <img src="https://m.media-amazon.com/images/I/51wEd2FprXL._SY445_SX342_.jpg" alt="" />
+  <img
+    src="https://m.media-amazon.com/images/I/71VjmMcE-rL._SY466_.jpg"
+    alt=""
+  />
 );
 
 
