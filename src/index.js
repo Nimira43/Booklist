@@ -1,19 +1,39 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 
-function Greeting() {
+const BookList = () => {
     return (
-        <>
-            <Person />
-            <Message />
-        </>
+        <section>
+            <Book />
+            <Book />
+            <Book />
+            <Book />
+        </section>
     )
 }
 
-const Person = () => <h2>John</h2>
-const Message = () => <h2>Hello</h2>
+const Book = () => {
+    return (
+        <article>
+            <Image />
+            <Title />
+            <Author />
+        </article>
+    )
+}
     
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<Greeting />)
+const Image = () => (
+  <img src="https://m.media-amazon.com/images/I/51wEd2FprXL._SY445_SX342_.jpg" alt="" />
+);
 
-export default Greeting
+
+
+const Title = () => {
+    return <h2>The Lord of the Rings</h2>;
+}
+const Author = () => <h4>J. R. R. Tolkien</h4>;
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(<BookList />)
+
+export default BookList
